@@ -7,7 +7,7 @@ object GameRunner {
     var notAWinner: Boolean = false
 }
 
-fun main() {
+fun main(args: Array<String>) {
     val aGame = Game()
 
     aGame.add("Chet")
@@ -17,7 +17,6 @@ fun main() {
     val rand = Random()
 
     do {
-
         aGame.roll(rand.nextInt(5) + 1)
 
         if (rand.nextInt(9) == 7) {
@@ -25,8 +24,5 @@ fun main() {
         } else {
             GameRunner.notAWinner = aGame.wasCorrectlyAnswered()
         }
-
-
     } while (GameRunner.notAWinner)
-
 }

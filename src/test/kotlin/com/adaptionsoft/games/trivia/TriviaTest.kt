@@ -15,12 +15,13 @@ class TriviaTest {
     fun `Trivia should print game result`() {
         val output = ClassLoader.getSystemResource("output.txt").readText()
 
-        main()
+        main(arrayOf())
 
         assertThat(output).isEqualTo(outputStreamCaptor)
     }
 
-    val outputStreamCaptor = ""
+    private val standardOut = System.out
+    private val outputStreamCaptor = ByteArrayOutputStream()
 
     @BeforeEach
     fun setUp() {
