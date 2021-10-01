@@ -34,8 +34,6 @@ class Game {
     }
 
     fun add(playerName: String): Boolean {
-
-
         players.add(playerName)
         places[howManyPlayers()] = 0
         purses[howManyPlayers()] = 0

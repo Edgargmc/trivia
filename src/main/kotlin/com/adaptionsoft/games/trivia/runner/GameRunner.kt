@@ -7,7 +7,7 @@ object GameRunner {
     var notAWinner: Boolean = false
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val aGame = Game()
 
     aGame.add("Chet")
