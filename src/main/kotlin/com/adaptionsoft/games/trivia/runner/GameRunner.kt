@@ -8,13 +8,16 @@ object GameRunner {
 }
 
 fun main(args: Array<String>) {
+    val randomNumberGenerator = Random()
+    playGame(randomNumberGenerator)
+}
+
+fun playGame(rand: Random) {
     val aGame = Game()
 
     aGame.add("Chet")
     aGame.add("Pat")
     aGame.add("Sue")
-
-    val rand = Random()
 
     do {
         aGame.roll(rand.nextInt(5) + 1)
